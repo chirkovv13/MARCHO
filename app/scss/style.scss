@@ -21,18 +21,18 @@
   }
   &__link{
     padding: 0 2px 1px;
-    @extend %quicksand-400;
+    @extend %roboto-400;
     text-transform: uppercase;
     color: $title;
     transition: color 0.4s, border-bottom 0.4s;
     &:hover{
-      @extend %quicksand-500;
+      @extend %roboto-700;
       color: $accent;
       border-bottom: 1px solid $accent;
     }
   }
   &__link--active{
-    @extend %quicksand-500;
+    @extend %roboto-700;
     color: $accent;
     border-bottom: 1px solid $accent;
   }
@@ -73,6 +73,8 @@
     border-radius: 50%;
   }
 }
+
+
 
 .footer {
   background-color: $bg;
