@@ -21,3 +21,19 @@ body{
 .main {
   flex-grow: 1;
 }
+
+.title {
+  margin-bottom: 10px;
+  font-size: 48px;
+  line-height: 1.35;
+  @extend %roboto-700;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title;
+}
+
+.text {
+  max-width: 570px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
