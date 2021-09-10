@@ -590,6 +590,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: rgb(246, 246, 246);
 
   &__inner {
     max-width: 570px;
@@ -618,6 +619,7 @@
     height: 120px;
     background-color: #fff;
     border-radius: 50%;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
 
     span {
       @extend %roboto-700;
@@ -648,6 +650,112 @@
   }
 }
 
+.blog {
+  padding: 50px 0 165px;
+  background-image: url('../images/blog-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+		&__items {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      margin-top: 55px;
+      &::after {
+        content: '';
+        position: absolute;
+        top: -25px;
+        right: -20px;
+        z-index: -1;
+        width: 126px;
+        height: 53px;
+        background-image: url('../images/decor/blog-decor.svg');
+      }
+		}
+
+		&__item {
+      max-width: 370px;
+      transition: box-shadow 0.3s, border 0.3s;
+		  &:hover {
+        box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+
+        .blog__item-box {
+          border: 1px solid transparent;
+        }
+
+        .blog__item-link {
+          color: $accent;
+
+          &::after {
+            background-image: url('../images/icons/arrow-accent.svg')
+          }
+        }
+      }
+		}
+
+		&__item-imglink {
+      display: block;
+
+      img {
+        object-fit: cover;
+      }
+		}
+
+		&__item-box {
+      padding: 30px 40px;
+      border: 1px solid #ececec;
+		}
+
+		&__item-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+		}
+    
+		&__item-author,
+		&__item-date {
+      position: relative;
+      padding-left: 30px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+      }
+		}
+
+    &__item-author::before {
+      background-image: url('../images/icons/user-grey.svg')
+    }
+
+		&__item-date::before {
+      background-image: url('../images/icons/time-grey.svg')
+    }
+
+		&__item-title {
+      margin-bottom: 20px;
+      @extend %roboto-400;
+      font-size: 22px;
+      color: $title;
+		}
+
+		&__item-link {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        right: -14px;
+        width: 10px;
+        height: 8px;
+        background-image: url('../images/icons/arrow-grey.svg')
+      }
+		}
+}
 
 
 
